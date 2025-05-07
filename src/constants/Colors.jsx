@@ -1,5 +1,19 @@
 export default {
     THEME: "#006229",
     THEME_TRANSPARENT: "#66A17F",
+    ACTIVE_NAVIGATION_COLOR: "#006229",
+    DISABLED_NAVIGATION_COLOR: "#808080",
+    WHITE: "#FFFFFF",
+    BLACK: "#000000",
+
+    DELUX_ROOM: "#ff2e62",
+    LUXURY_ROOM: "#45d689",
+    NORMAL_ROOM: "#6e45d6",
+    OCCUPIED: "#c1c7c4",
+    RENTABLE: "#497feb",
+
+    PAID_ROOM: "#3eb363",
+    UNPAID_ROOM: "#e63c5b",
+    VACENT_ROOM: "#7a7878"
 
 }

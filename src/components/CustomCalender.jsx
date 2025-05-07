@@ -33,7 +33,8 @@ const CustomCalender = ({ onSelectDateRange }) => {
         markedDates[today] = {
             customStyles: {
                 text: {
-                    color: Colors.THEME, // Use your theme color for today's text
+                    
+                    color: Colors.THEME,
                     fontWeight: 'bold'
                 }
             }
