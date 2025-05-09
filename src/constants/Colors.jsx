@@ -1,19 +1,28 @@
 export default {
     THEME: "#006229",
     THEME_TRANSPARENT: "#66A17F",
+    PAGE_COLOR: "#ececec",
     ACTIVE_NAVIGATION_COLOR: "#006229",
     DISABLED_NAVIGATION_COLOR: "#808080",
     WHITE: "#FFFFFF",
     BLACK: "#000000",
+    FADE: "#abadb0",
+    DEACTIVE: "#e8e8ed",
+    BLUE: "#4582f5",
+    YELLOW: "#f5ca20",
+    TRANSPARENT: "#00000088",
 
-    DELUX_ROOM: "#ff2e62",
-    LUXURY_ROOM: "#45d689",
-    NORMAL_ROOM: "#6e45d6",
+    DELUX_ROOM: "#008080",
+    LUXURY_ROOM: "#4B0082",
+    NORMAL_ROOM: "#87CEEB",
     OCCUPIED: "#c1c7c4",
     RENTABLE: "#497feb",
+    CARD: "#FEF5ED",
 
-    PAID_ROOM: "#3eb363",
-    UNPAID_ROOM: "#e63c5b",
-    VACENT_ROOM: "#7a7878"
+    PAID_ROOM: "#009688",
+    UNPAID_ROOM: "#F44336",
+    VACENT_ROOM: "#9E9E9E",
+
+    CLOSE: "#F47C7C",
 
 }

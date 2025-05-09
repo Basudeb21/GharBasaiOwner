@@ -15,6 +15,7 @@ export default {
 
     // 
     ROOM_DETAILS: "RoomDetailsScreen",
+    ROOM_DETAIL_PAGE: "RoomDetailsPage",
 
     // 
     BOOKING_DETAILS: "BookingRoomDetails"
