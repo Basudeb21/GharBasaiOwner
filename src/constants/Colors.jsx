@@ -11,6 +11,9 @@ export default {
     BLUE: "#4582f5",
     YELLOW: "#f5ca20",
     TRANSPARENT: "#00000088",
+    SEA_GREEN: "#8db6a4",
+    ROYAL_BLUE: "#4d4e8d",
+    TOMATO: "#fe5f50",
 
     DELUX_ROOM: "#008080",
     LUXURY_ROOM: "#4B0082",
@@ -18,6 +21,7 @@ export default {
     OCCUPIED: "#c1c7c4",
     RENTABLE: "#497feb",
     CARD: "#FEF5ED",
+    OTHER_ICON: "#2b2b2b",
 
     PAID_ROOM: "#009688",
     UNPAID_ROOM: "#F44336",

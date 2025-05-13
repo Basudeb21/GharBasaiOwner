@@ -65,7 +65,7 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.CARD,
         elevation: scale(2),
         borderRadius: scale(12),
-        marginHorizontal: moderateScale(20),
+        marginHorizontal: moderateScale(10),
         marginVertical: verticalScale(10),
         padding: verticalScale(20),
         flexDirection: "row",

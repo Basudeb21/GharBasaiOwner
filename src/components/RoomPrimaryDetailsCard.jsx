@@ -92,7 +92,15 @@ const RoomPrimaryDetailsCard = ({ data, screenType }) => {
                         style={[styles.btn, { backgroundColor: Colors.BLUE }]}>
                         <Text style={styles.btnTxt}>view</Text>
                     </TouchableOpacity>
-                    <TouchableOpacity style={[styles.btn, { backgroundColor: Colors.YELLOW }]}>
+                    <TouchableOpacity
+                        onPress={() => {
+                            if (data.status === 'vacant' || data.type === 'vacant') {
+                                setIsDialogVisible(true);
+                            } else {
+                                navigation.navigate(NavigationStrings.ROOM_DETAILS_EDIT)
+                            }
+                        }}
+                        style={[styles.btn, { backgroundColor: Colors.YELLOW }]}>
                         <Text style={styles.btnTxt}>edit</Text>
                     </TouchableOpacity>
                 </View>

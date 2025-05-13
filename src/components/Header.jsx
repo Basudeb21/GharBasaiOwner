@@ -4,13 +4,13 @@ import AntDesign from 'react-native-vector-icons/dist/AntDesign'
 import { moderateScale, scale, verticalScale } from 'react-native-size-matters'
 import { useNavigation } from '@react-navigation/native'
 import Colors from '../constants/Colors'
-const Header = ({ title, theme = "CUSTOM" }) => {
+const Header = ({ title }) => {
     const navigation = useNavigation();
     const handleBackPress = () => {
         navigation.pop();
     };
     return (
-        <View style={theme === "CUSTOM" ? styles.container : styles.containerTwo}>
+        <View style={styles.container}>
             <TouchableOpacity
                 onPress={handleBackPress}
                 style={styles.backButton}
@@ -18,13 +18,13 @@ const Header = ({ title, theme = "CUSTOM" }) => {
             >
                 <AntDesign
                     name="arrowleft"
-                    color={theme === "CUSTOM" ? Colors.BLACK : Colors.WHITE}
+                    color={Colors.WHITE}
                     size={24}
                     style={styles.backIcon}
                 />
             </TouchableOpacity>
             <View style={styles.titleContainer}>
-                <Text style={theme === "CUSTOM" ? styles.title : styles.titleTwo}>{title}</Text>
+                <Text style={styles.title}>{title}</Text>
             </View>
         </View>
     )
@@ -34,14 +34,6 @@ export default Header
 
 const styles = StyleSheet.create({
     container: {
-        flexDirection: "row",
-        paddingVertical: verticalScale(10),
-        paddingHorizontal: moderateScale(10),
-        alignItems: 'center',
-        backgroundColor: Colors.WHITE,
-        elevation: scale(2)
-    },
-    containerTwo: {
         flexDirection: "row",
         paddingVertical: verticalScale(10),
         paddingHorizontal: moderateScale(10),
@@ -58,11 +50,6 @@ const styles = StyleSheet.create({
         alignItems: 'center',
     },
     title: {
-        fontSize: scale(20),
-        fontWeight: "600",
-        color: Colors.BLACK
-    },
-    titleTwo: {
         fontSize: scale(20),
         fontWeight: "600",
         color: Colors.WHITE

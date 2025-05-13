@@ -163,11 +163,12 @@ export default RoomDetailsCard
 const styles = StyleSheet.create({
     card: {
         padding: scale(20),
-        marginHorizontal: moderateScale(20),
-        marginVertical: verticalScale(10),
+        marginHorizontal: moderateScale(10),
+        marginBottom: verticalScale(10),
         backgroundColor: Colors.CARD,
-        borderRadius: scale(12),
-        elevation: scale(2)
+        borderRadius: scale(8),
+        elevation: scale(2),
+        marginTop: verticalScale(-20)
     },
     detailsContainer: {
         flexDirection: "row",

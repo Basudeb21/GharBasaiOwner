@@ -1,4 +1,4 @@
-import { ScrollView, StyleSheet, Text, View } from 'react-native'
+import { ScrollView, StyleSheet, Text, View, Dimensions } from 'react-native'
 import React, { useLayoutEffect } from 'react'
 import { useNavigation } from '@react-navigation/native'
 import AutoImageSlider from '../../../components/AutoImageSlider'
@@ -6,6 +6,8 @@ import Header from '../../../components/Header'
 import RoomDetailsCard from './RoomDetailsCard'
 import FacilityCard from '../../../components/FacilityCard'
 import { verticalScale } from 'react-native-size-matters'
+import BottmAction from '../../../components/BottmAction'
+import Colors from '../../../constants/Colors'
 
 const RoomDetailsPage = () => {
     const navigation = useNavigation();
@@ -23,15 +25,20 @@ const RoomDetailsPage = () => {
             });
         };
     }, [navigation]);
-    return (
-        <View>
-            <Header title={"Hotel Details View"} theme='BASIC' />
-            <ScrollView style={styles.scroll}>
-                <AutoImageSlider />
-                <RoomDetailsCard />
-                <FacilityCard />
-            </ScrollView>
 
+    return (
+        <View style={styles.pageContainer}>
+            <Header title={"Hotel Details View"} theme='BASIC' />
+            <View style={styles.contentContainer}>
+                <ScrollView contentContainerStyle={styles.scrollContent}>
+                    <AutoImageSlider />
+                    <RoomDetailsCard />
+                    <FacilityCard />
+                </ScrollView>
+                <View style={styles.btm}>
+                    <BottmAction />
+                </View>
+            </View>
         </View>
     )
 }
@@ -39,7 +46,20 @@ const RoomDetailsPage = () => {
 export default RoomDetailsPage
 
 const styles = StyleSheet.create({
-    scroll: {
-        marginBottom: verticalScale(60)
-    }
-})
+    pageContainer: {
+        flex: 1,
+        backgroundColor: Colors.WHITE,
+    },
+    contentContainer: {
+        flex: 1,
+    },
+    scrollContent: {
+        paddingBottom: verticalScale(1),
+    },
+    btm: {
+        height: verticalScale(60),
+        justifyContent: 'center',
+        backgroundColor: Colors.THEME,
+        elevation: 10,
+    },
+});
