@@ -14,6 +14,8 @@ export default {
     SEA_GREEN: "#8db6a4",
     ROYAL_BLUE: "#4d4e8d",
     TOMATO: "#fe5f50",
+    PLACEHOLDER: "#888888",
+    LABEL: "#495057",
 
     DELUX_ROOM: "#008080",
     LUXURY_ROOM: "#4B0082",

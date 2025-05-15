@@ -2,19 +2,14 @@ import { StyleSheet, Text, View } from 'react-native'
 import React from 'react'
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import NavigationStrings from '../constants/NavigationStrings';
-import { Dashboard, Home, Others } from '../screens';
+import { Dashboard, Home, Others, RoomManagement } from '../screens';
 import Colors from '../constants/Colors';
-import FontAwesome from 'react-native-vector-icons/dist/FontAwesome'
 import AntDesign from 'react-native-vector-icons/dist/AntDesign'
 import Feather from 'react-native-vector-icons/dist/Feather'
 import Fontisto from 'react-native-vector-icons/dist/Fontisto'
-
-
-
-
 import { verticalScale } from 'react-native-size-matters';
-import RoomDetailsStack from '../navigation/RoomDetailsStack';
 import BookingRoomStack from '../navigation/BookingRoomStack';
+import { ChatScreen } from '../screens/chat';
 
 
 const BottomNavbar = () => {
@@ -29,7 +24,7 @@ const BottomNavbar = () => {
                 headerShown: false,
             }}
         >
-            <Tab.Screen
+            {/* <Tab.Screen
                 name={NavigationStrings.HOME}
                 component={Home}
                 options={{
@@ -42,7 +37,7 @@ const BottomNavbar = () => {
                         />
                     ),
                 }}
-            />
+            /> */}
             <Tab.Screen
                 name={NavigationStrings.DASHBOARD}
                 component={Dashboard}
@@ -57,10 +52,24 @@ const BottomNavbar = () => {
                     ),
                 }}
             />
+            <Tab.Screen
+                name={NavigationStrings.CHAT}
+                component={ChatScreen}
+                options={{
+                    tabBarLabel: NavigationStrings.CHAT,
+                    tabBarIcon: ({ focused }) => (
+                        <AntDesign
+                            name="wechat"
+                            size={24}
+                            color={focused ? Colors.ACTIVE_NAVIGATION_COLOR : Colors.DISABLED_NAVIGATION_COLOR}
+                        />
+                    ),
+                }}
+            />
 
             <Tab.Screen
                 name={NavigationStrings.ROOM}
-                component={RoomDetailsStack}
+                component={RoomManagement}
                 options={{
                     tabBarLabel: NavigationStrings.ROOM,
                     tabBarIcon: ({ focused }) => (

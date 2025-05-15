@@ -3,10 +3,10 @@ import React from 'react'
 import Colors from '../constants/Colors'
 import { moderateScale, verticalScale } from 'react-native-size-matters'
 
-const OthersCard = ({ icon, label }) => {
+const OthersCard = ({ icon, label, onPress }) => {
 
     return (
-        <TouchableOpacity style={styles.cardContainer} activeOpacity={0.7}>
+        <TouchableOpacity style={styles.cardContainer} onPress={onPress} activeOpacity={0.7}>
             <View style={styles.iconWrapper}>
                 {icon}
             </View>

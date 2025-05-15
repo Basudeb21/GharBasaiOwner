@@ -83,11 +83,11 @@ const RoomPrimaryDetailsCard = ({ data, screenType }) => {
                 <View style={styles.rightContainer}>
                     <TouchableOpacity
                         onPress={() => {
-                            if (data.status === 'vacant' || data.type === 'vacant') {
-                                setIsDialogVisible(true);
-                            } else {
-                                navigation.navigate(NavigationStrings.ROOM_DETAIL_PAGE)
-                            }
+                            navigation.navigate(NavigationStrings.ROOM_DETAILS_STACK, {
+                                screen: NavigationStrings.ROOM_DETAILS,
+                                params: { roomType: data.type },
+                            })
+
                         }}
                         style={[styles.btn, { backgroundColor: Colors.BLUE }]}>
                         <Text style={styles.btnTxt}>view</Text>
@@ -97,7 +97,7 @@ const RoomPrimaryDetailsCard = ({ data, screenType }) => {
                             if (data.status === 'vacant' || data.type === 'vacant') {
                                 setIsDialogVisible(true);
                             } else {
-                                navigation.navigate(NavigationStrings.ROOM_DETAILS_EDIT)
+                                navigation.navigate(NavigationStrings.ROOM_DETAILS_STACK, { screen: NavigationStrings.ROOM_DETAILS_EDIT })
                             }
                         }}
                         style={[styles.btn, { backgroundColor: Colors.YELLOW }]}>

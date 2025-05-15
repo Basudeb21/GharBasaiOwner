@@ -1,6 +1,7 @@
 export default {
     // Stacks
     MAIN_STACK: "MainStack",
+    CHAT_STACK: "ChatStack",
 
     // Sub Stacks
     ROOM_DETAILS_STACK: "RoomDetailsStack",
@@ -12,6 +13,7 @@ export default {
     OTHERS: "Others",
     DASHBOARD: "Dashboard",
     ROOM: "Rooms",
+    CHAT: "Chat",
 
     // 
     ROOM_DETAILS: "RoomDetailsScreen",
@@ -19,5 +21,8 @@ export default {
     ROOM_DETAILS_EDIT: "EditRoomDetails",
 
     // 
-    BOOKING_DETAILS: "BookingRoomDetails"
+    BOOKING_DETAILS: "BookingRoomDetails",
+
+    // 
+    CHAT_AREA: "ChatArea"
 }

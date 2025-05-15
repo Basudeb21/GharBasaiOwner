@@ -9,21 +9,17 @@ import MaterialIcons from 'react-native-vector-icons/MaterialIcons';
 import { moderateScale, verticalScale } from 'react-native-size-matters';
 import Colors from '../../constants/Colors';
 import RateApp from '../../components/RateApp';
+import NavigationStrings from '../../constants/NavigationStrings';
+import { useNavigation } from '@react-navigation/native';
 
 const Others = () => {
+    const navigation = useNavigation();
+
     const options = [
-        {
-            icon: <FontAwesome5 name="user-cog" size={24} color={Colors.OTHER_ICON} />, label: "User Management"
-        },
-        {
-            icon: <Fontisto name="holiday-village" size={24} color={Colors.OTHER_ICON} />, label: "Homestay Management"
-        },
-        {
-            icon: <MaterialCommunityIcons name="bag-personal" size={24} color={Colors.OTHER_ICON} />, label: "Tour Management"
-        },
-        {
-            icon: <MaterialIcons name="miscellaneous-services" size={24} color={Colors.OTHER_ICON} />, label: "Service Management"
-        },
+        { icon: <FontAwesome5 name="user-cog" size={24} color={Colors.OTHER_ICON} />, label: "User Management" },
+        { icon: <Fontisto name="holiday-village" size={24} color={Colors.OTHER_ICON} />, label: "Homestay Management" },
+        { icon: <MaterialCommunityIcons name="bag-personal" size={24} color={Colors.OTHER_ICON} />, label: "Tour Management" },
+        { icon: <MaterialIcons name="miscellaneous-services" size={24} color={Colors.OTHER_ICON} />, label: "Service Management" },
         { icon: <FontAwesome5 name="blog" size={24} color={Colors.OTHER_ICON} />, label: "Blog Management" },
         { icon: <Fontisto name="photograph" size={24} color={Colors.OTHER_ICON} />, label: "Galary Management" },
         { icon: <AntDesign name="questioncircleo" size={24} color={Colors.OTHER_ICON} />, label: "FAQ Management" },
@@ -41,8 +37,16 @@ const Others = () => {
                         key={index}
                         icon={item.icon}
                         label={item.label}
+                        onPress={() => {
+                            switch (item.label) {
+                                case "Chat":
+                                    navigation.navigate(NavigationStrings.CHAT_STACK, {
+                                        screen: NavigationStrings.CHAT_SCREEN,
+                                    });
+                                    break;
+                            }
 
-
+                        }}
                     />
                 ))}
             </View>

@@ -11,20 +11,9 @@ const RoomDetailsStack = () => {
 
     return (
         <Stack.Navigator screenOptions={{ headerShown: false }}>
-            <Stack.Screen name={NavigationStrings.ROOM} component={Room} />
             <Stack.Screen name={NavigationStrings.ROOM_DETAILS} component={RoomDetails} />
-            <Stack.Screen name={NavigationStrings.ROOM_DETAIL_PAGE} component={RoomDetailsPage}
-                options={{
-                    headerShown: false,
-                    tabBarStyle: { display: 'none' }
-                }}
-            />
-            <Stack.Screen name={NavigationStrings.ROOM_DETAILS_EDIT} component={EditRoomDetails}
-                options={{
-                    headerShown: false,
-                    tabBarStyle: { display: 'none' }
-                }}
-            />
+            <Stack.Screen name={NavigationStrings.ROOM_DETAIL_PAGE} component={RoomDetailsPage} />
+            <Stack.Screen name={NavigationStrings.ROOM_DETAILS_EDIT} component={EditRoomDetails} />
         </Stack.Navigator>
     )
 }
