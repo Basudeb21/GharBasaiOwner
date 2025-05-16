@@ -10,6 +10,7 @@ import FeaturedImg from '../micro-comps/FeaturedImg';
 import Header from '../../../components/Header';
 import RoomDetailsInputSection from './RoomDetailsInputSection';
 import { verticalScale } from 'react-native-size-matters';
+import ImageAdderSection from './ImageAdderSection';
 
 const EditRoomDetails = () => {
     return (
@@ -29,6 +30,7 @@ const EditRoomDetails = () => {
                 >
                     <FeaturedImg />
                     <RoomDetailsInputSection />
+                    <ImageAdderSection />
                 </ScrollView>
             </KeyboardAvoidingView>
         </View>
@@ -40,6 +42,6 @@ export default EditRoomDetails;
 const styles = StyleSheet.create({
     scrollViewContent: {
         flexGrow: 1,
-        paddingBottom: verticalScale(10)
+        paddingBottom: verticalScale(22)
     },
 });

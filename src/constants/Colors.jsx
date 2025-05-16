@@ -16,7 +16,7 @@ export default {
     TOMATO: "#fe5f50",
     PLACEHOLDER: "#888888",
     LABEL: "#495057",
-
+    LIGHT_GRAY: "#d9d5d4",
     DELUX_ROOM: "#008080",
     LUXURY_ROOM: "#4B0082",
     NORMAL_ROOM: "#87CEEB",

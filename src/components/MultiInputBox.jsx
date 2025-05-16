@@ -25,7 +25,15 @@ const MultiInputBox = ({ label }) => {
             <View style={styles.inputArea}>
                 <View style={styles.amenityList}>
                     {items.map((amenity, index) => (
-                        <Aminity key={index} label={amenity} />
+                        <Aminity
+                            key={`${amenity}-${index}`}
+                            label={amenity}
+                            onRemove={() => {
+                                setItems(prevItems =>
+                                    prevItems.filter((_, i) => i !== index)
+                                );
+                            }}
+                        />
                     ))}
                 </View>
             </View>
@@ -66,6 +74,7 @@ const styles = StyleSheet.create({
         padding: scale(20),
         borderRadius: scale(12),
         minHeight: verticalScale(60),
+
     },
     amenityList: {
         flexDirection: 'row',

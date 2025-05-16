@@ -28,16 +28,19 @@ const styles = StyleSheet.create({
         backgroundColor: Colors.WHITE,
         marginHorizontal: moderateScale(10),
         marginTop: verticalScale(10),
-        padding: scale(10),
+        paddingVertical: scale(10),
         borderRadius: scale(15),
-        elevation: scale(10)
+        elevation: scale(10),
     },
     pieContainer: {
-        flexDirection: "row"
+        flexDirection: "row",
+        justifyContent: "space-evenly"
+
     },
     incomeDetailsContainer: {
         flexDirection: "row",
-        justifyContent: "space-between"
+        justifyContent: "space-between",
+        paddingEnd: moderateScale(20)
     },
     headTxt: {
         color: Colors.DISABLED_NAVIGATION_COLOR,
